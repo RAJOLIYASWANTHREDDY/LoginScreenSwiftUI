@@ -15,20 +15,12 @@ struct ContentView: View {
    var body: some View {
        ZStack {
            // Background gradient
-//           LinearGradient(
-//               gradient: Gradient(colors: [
-//                   Color(red: 0.1, green: 0.2, blue: 0.5),
-//                   Color(red: 0.2, green: 0.3, blue: 0.7)
-//               ]),
-//               startPoint: .topLeading,
-//               endPoint: .bottomTrailing
-//           )
            Color(#colorLiteral(red: 0, green: 0.7840057015, blue: 0.9120769501, alpha: 0.4060154754))
            .ignoresSafeArea()
            
            VStack(spacing: 24) {
                // Header
-               VStack(spacing: 8) {
+               VStack(spacing: 5) {
                    Text("Welcome Back")
                        .font(.system(size: 32, weight: .bold))
                        .foregroundColor(.white)
@@ -37,7 +29,7 @@ struct ContentView: View {
                        .font(.system(size: 16, weight: .regular))
                        .foregroundColor(.white.opacity(1))
                }
-               .frame(maxWidth: .infinity, alignment: .leading)
+               .frame(maxWidth: .infinity, alignment: .center)
                .padding(.bottom, 16)
                
                // Email Field
@@ -57,7 +49,7 @@ struct ContentView: View {
                // Password Field
                HStack(spacing: 12) {
                    Image(systemName: "lock.fill")
-                       .foregroundColor(.gray.opacity(0.6))
+                       .foregroundColor(.gray.opacity(0.5))
                    
                    SecureField("Password", text: $password)
                        .foregroundColor(.white)
