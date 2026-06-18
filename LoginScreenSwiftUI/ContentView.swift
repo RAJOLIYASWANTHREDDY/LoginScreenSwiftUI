@@ -45,6 +45,11 @@ struct ContentView: View {
                .padding(12)
                .background(Color.white.opacity(0.15))
                .cornerRadius(8)
+               .overlay(
+                   RoundedRectangle(cornerRadius: 8)
+                       .stroke(Color.gray, lineWidth: 1)
+               )
+               
                
                // Password Field
                HStack(spacing: 12) {
@@ -57,6 +62,10 @@ struct ContentView: View {
                .padding(12)
                .background(Color.white.opacity(0.15))
                .cornerRadius(8)
+               .overlay(
+                   RoundedRectangle(cornerRadius: 8)
+                       .stroke(Color.gray, lineWidth: 1)
+               )
                
                Spacer()
                
@@ -69,6 +78,10 @@ struct ContentView: View {
                        .background(Color.white)
                        .foregroundColor(Color(red: 0.1, green: 0.2, blue: 0.5))
                        .cornerRadius(8)
+                       .overlay(
+                           RoundedRectangle(cornerRadius: 8)
+                               .stroke(Color.gray, lineWidth: 1)
+                       )
                }
                
                // Sign Up Link
